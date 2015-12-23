@@ -31,7 +31,7 @@
   - https://www.globalsign.com/en/blog/google-to-display-warnings-on-sites-that-use-sha-1-certificates/
 
 # TODO
-- make a tool to issue certificates
-- sha1 certificate with "Valid After 2015", 2016 and 2017.
-- RSA key <= 768bits, 1024bits, 2048bits
-       
+- RSA key &gt;= 768bits, 1024bits, 2048bits
+- safe certificate (sha256, rsa2048,...)
+- weak cipher (RC4, aes-cbc, ...)
+- TLS version (SSLv3, TLS1.0, TLS1.2...)
