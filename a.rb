@@ -2,7 +2,9 @@
 
 require 'openssl'
 
-$serial = 0
+def new_serial
+  rand(2**32)
+end
 
 class CertUtils
   def self.mkcert(h={})
@@ -23,7 +25,7 @@ class CertUtils
 
     cert = OpenSSL::X509::Certificate.new
     cert.version = 3
-    cert.serial = ($serial += 1)
+    cert.serial = new_serial()
     cert.not_before = h[:not_before]
     cert.not_after = h[:not_after]
     cert.subject = OpenSSL::X509::Name.new([[ "CN", h[:cn] ]])
@@ -74,17 +76,27 @@ class Server
   end
 end
 
-root_cert, root_pkey = CertUtils.mkcert({
-  :cn => "100% Trustworthy Certificate Authority",
-  :self_signed => true,
-  :not_after => Time.now + 86400*365*10   # 10 years
-})
-File.open("root_cert.pem", "w") { |f| f.write(root_cert.to_pem) }
+root_cert = root_pkey = nil
+if File.exist? "root_cert.pem"
+  root_cert = OpenSSL::X509::Certificate.new File.read("root_cert.pem")
+  root_pkey = OpenSSL::PKey::RSA.new File.read("root_pkey.pem")
+else
+  puts "Generating a Certificate for a new root CA..."
+
+  root_cert, root_pkey = CertUtils.mkcert({
+    :cn => "100% Trustworthy Certificate Authority",
+    :self_signed => true,
+    :not_after => Time.now + 86400*365*10   # 10 years
+  })
+  File.open("root_cert.pem", "w") { |f| f.write(root_cert.to_pem) }
+  File.open("root_pkey.pem", "w") { |f| f.write(root_pkey.to_pem) }
+end
 
 s = Server.new
 s.mkcert({
   :cn => "localhost",
   :ca_certificate => root_cert,
   :ca_key => root_pkey,
-  :not_after => Time.now + 86400*600
+  :hash_algorithm => :sha1,
+  :not_after => Time.now + 86400 #*360
 })
