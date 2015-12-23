@@ -18,7 +18,7 @@
 
 |            x   | Safari | Chrome | Firefox |
 |:---------------|--------|--------|---------|
-| expires 2017/8 | gray   |    -    | -      |
+| SHA1 certificate expires 2018/9 | gray   | (red) | -       |
 
 
 
