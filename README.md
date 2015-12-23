@@ -23,9 +23,6 @@
 | SHA1 certificate expires 2017/1 | ![space](https://github.com/tsahara/padlocks/raw/master/safari-no-mark.png)   | ![red](https://github.com/tsahara/padlocks/raw/master/chrome-red-x.png) | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png) |
 
 
-
-## Certificate expires 2017/8
-
 # Reference
 - Chrome
   - https://www.globalsign.com/en/blog/google-to-display-warnings-on-sites-that-use-sha-1-certificates/
