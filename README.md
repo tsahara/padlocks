@@ -17,11 +17,12 @@
 - Windows 版はシステムの証明書を信用する(当然)
 
 
-|            x   | Safari | Chrome | Firefox | Edge |
+|  Certificate   | Safari | Chrome | Firefox | Edge |
 |:---------------|--------|--------|---------|------|
-| SHA1 certificate expires 2015/12 | ![space](https://github.com/tsahara/padlocks/raw/master/safari-no-mark.png)   | ![green](https://github.com/tsahara/padlocks/raw/master/chrome-green.png)     | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png)    | ![gray](https://github.com/tsahara/padlocks/raw/master/edge-gray.png) |
-| SHA1 certificate expires 2016/12 | ![space](https://github.com/tsahara/padlocks/raw/master/safari-no-mark.png)   | ![gray](https://github.com/tsahara/padlocks/raw/master/chrome-gray.png)       | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png)    | ![gray](https://github.com/tsahara/padlocks/raw/master/edge-gray.png) |
-| SHA1 certificate expires 2017/1  | ![space](https://github.com/tsahara/padlocks/raw/master/safari-no-mark.png)   | ![red](https://github.com/tsahara/padlocks/raw/master/chrome-red-x.png)       | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png)    | ![gray](https://github.com/tsahara/padlocks/raw/master/edge-gray.png) |
+| SHA2                  | ![green](https://github.com/tsahara/padlocks/raw/master/safari-padlock.png)   | ![green](https://github.com/tsahara/padlocks/raw/master/chrome-green.png)     | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png)    | ![gray](https://github.com/tsahara/padlocks/raw/master/edge-gray.png) |
+| SHA1, expires 2015/12 | ![space](https://github.com/tsahara/padlocks/raw/master/safari-no-mark.png)   | ![green](https://github.com/tsahara/padlocks/raw/master/chrome-green.png)     | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png)    | ![gray](https://github.com/tsahara/padlocks/raw/master/edge-gray.png) |
+| SHA1, expires 2016/12 | ![space](https://github.com/tsahara/padlocks/raw/master/safari-no-mark.png)   | ![gray](https://github.com/tsahara/padlocks/raw/master/chrome-gray.png)       | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png)    | ![gray](https://github.com/tsahara/padlocks/raw/master/edge-gray.png) |
+| SHA1, expires 2017/1  | ![space](https://github.com/tsahara/padlocks/raw/master/safari-no-mark.png)   | ![red](https://github.com/tsahara/padlocks/raw/master/chrome-red-x.png)       | ![green](https://github.com/tsahara/padlocks/raw/master/firefox-green.png)    | ![gray](https://github.com/tsahara/padlocks/raw/master/edge-gray.png) |
 
 
 # SHA1 Deprecation Policy
