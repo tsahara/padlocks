@@ -28,6 +28,8 @@
 # SHA1 Deprecation Policy
 - CAB forum
   - ...
+- Google Chrome
+  - https://googleonlinesecurity.blogspot.jp/2015/12/an-update-on-sha-1-certificates-in.html
 - Microsoft Edge
   - will block SHA1 certificate in 2016/6
   - https://blogs.windows.com/msedgedev/2015/11/04/sha-1-deprecation-update/
